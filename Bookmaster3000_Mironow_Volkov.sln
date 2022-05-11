@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmaster3000_Mironow_Volkov", "Bookmaster3000_Mironow_Volkov\Bookmaster3000_Mironow_Volkov.csproj", "{D810B070-F664-418E-9040-0E2289B4D4CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D810B070-F664-418E-9040-0E2289B4D4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D810B070-F664-418E-9040-0E2289B4D4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D810B070-F664-418E-9040-0E2289B4D4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D810B070-F664-418E-9040-0E2289B4D4CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2ED7C8B3-968D-49FA-AAC6-7BB9867244E0}
+	EndGlobalSection
+EndGlobal

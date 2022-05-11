@@ -1,0 +1,56 @@
+﻿<Window x:Class="Bookmaster3000_Mironow_Volkov.Wiev.Windows.EddEditCustomerWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bookmaster3000_Mironow_Volkov.Wiev.Windows"
+        mc:Ignorable="d"
+        Title="EddEditCustomerWindows" Height="400" Width="800" WindowStartupLocation="CenterScreen" Icon="/Resurses/Image/booklogo.jpg">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="ID" Grid.Row="1" Grid.Column="0" Style="{StaticResource StyleTextBlock}"/>
+        <TextBlock Text="Name" Grid.Row="2" Grid.Column="0" Style="{StaticResource StyleTextBlock}"/>
+        <TextBlock Text="Address" Grid.Row="3" Grid.Column="0" Style="{StaticResource StyleTextBlock}"/>
+        <TextBlock Text="Zip/City" Grid.Row="4" Grid.Column="0" Style="{StaticResource StyleTextBlock}"/>
+        <TextBlock Text="Phone" Grid.Row="2" Grid.Column="2" Style="{StaticResource StyleTextBlock}"/>
+        <TextBlock Text="Email" Grid.Row="3" Grid.Column="2" Style="{StaticResource StyleTextBlock}"/>
+
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="IdTB" VerticalAlignment="Center" Height="40" Style="{StaticResource StyleTextBox}"/>
+        <TextBox Text="{Binding Name}" Grid.Row="2" Grid.Column="1" x:Name="NameTB" VerticalAlignment="Center" Height="40" Style="{StaticResource StyleTextBox}"/>
+        <TextBox Text="{Binding Address}" Grid.Row="3" Grid.Column="1" x:Name="AddressTB" VerticalAlignment="Center" Height="40" Style="{StaticResource StyleTextBox}"/>
+
+        <TextBox Text="{Binding Phone}" Grid.Row="2" Grid.Column="3" x:Name="PhoneTB" VerticalAlignment="Center" Height="40" TextChanged="PhoneTB_TextChanged" Style="{StaticResource StyleTextBox}"/>
+        <TextBox Text="{Binding Email}" Grid.Row="3" Grid.Column="3" x:Name="EmailTB" VerticalAlignment="Center" Height="40" Style="{StaticResource StyleTextBox}"/>
+
+        <Grid Grid.Row="4" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Text="{Binding Zip}" x:Name="ZipTB" VerticalAlignment="Center" Height="40" Style="{StaticResource StyleTextBox}"/>
+            <TextBox Text="{Binding City}" Grid.Column="2" x:Name="CityTB" VerticalAlignment="Center" Height="40" Style="{StaticResource StyleTextBox}"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="SAVE" Style="{StaticResource StyleButton}" Padding="30 5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="SaveBtn" Click="SaveBtn_Click"/>
+            <Button Content="ADD" Style="{StaticResource StyleButton}" Padding="30 5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="AddBtn" Click="AddBtn_Click"/>
+            <Button Content="CENCEL" Style="{StaticResource StyleButton}" Padding="30 5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="CencelBtn" Click="CencelBtn_Click"/>
+        </StackPanel> 
+    </Grid>
+</Window>

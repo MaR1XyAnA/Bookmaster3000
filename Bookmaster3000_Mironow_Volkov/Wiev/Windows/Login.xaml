@@ -1,0 +1,74 @@
+﻿<Window x:Class="Bookmaster3000_Mironow_Volkov.Wiev.Windows.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bookmaster3000_Mironow_Volkov.Wiev.Windows"
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="500" Icon="/Resurses/Image/booklogo.jpg" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="350"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Username" Grid.Column="0" Grid.Row="1" Style="{StaticResource StyleTextBlock}"/>
+        <TextBlock Text="Password" Grid.Column="0" Grid.Row="2" Style="{StaticResource StyleTextBlock}"/>
+        
+        <!--#Region Отсылки-->
+        <TextBlock 
+            Text="Приложение написано Владом и Лизой специально для практики в программировании" 
+            Foreground="White" 
+            FontSize="1"/>
+        <!--#EndRegion-->
+
+        <TextBox 
+            x:Name="LoginLogo"
+            Grid.Row="1" 
+            Grid.Column="1" 
+            Height="40" 
+            Width="250"
+            Style="{StaticResource StyleLognTB}"/>
+        <PasswordBox 
+            x:Name="PasswordLogo"
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Height="40" 
+            Width="250"/>
+
+        <Grid Grid.Row="3" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <Button 
+                x:Name="LoginBtn"
+                Click="LoginBtn_Click"
+                Height="35"
+                Width="100"
+                Grid.Column="1"
+                Content="Login" 
+                Style="{StaticResource StyleButton}"/>
+
+            <Button 
+                x:Name="CancelBtn"
+                Click="CancelBtn_Click"
+                Height="35"
+                Width="110"
+                Grid.Column="2"
+                Content="Cancel" 
+                Style="{StaticResource StyleButton}"/>
+        </Grid>
+        <!--#region NGGYU-->
+        <!--https://www.youtube.com/watch?v=dQw4w9WgXcQ-->
+        <!--#endregion-->
+    </Grid>
+</Window>

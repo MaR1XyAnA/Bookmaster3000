@@ -1,0 +1,76 @@
+﻿<Page x:Class="Bookmaster3000_Mironow_Volkov.Wiev.Pages.BookinformationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Bookmaster3000_Mironow_Volkov.Wiev.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="414" d:DesignWidth="954"
+      Title="BookinformationPage">
+
+    <Grid Margin="10" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock 
+            Text="{Binding Books.Title}"
+            FontSize="40"
+            FontWeight="SemiBold"/>
+        
+        <TextBlock Grid.Row="1" FontSize="20">
+            <Hyperlink Name="Perexod" Click="Perexod_Click">
+                <TextBlock Text="{Binding Authors.Name, StringFormat=by {0}}"/>
+            </Hyperlink>
+        </TextBlock>
+        
+        <TextBlock 
+            Text="{Binding Books.FirstPublishDate, StringFormat=first published:{0}}"
+            Grid.Row="2" 
+            FontSize="20"/>
+
+        <GroupBox 
+            Grid.Row="3" 
+            Header="Description" 
+            FontSize="20" 
+            BorderThickness="0"
+            FontWeight="SemiBold"
+            VerticalAlignment="Center">
+            <TextBlock
+                Text="{Binding Books.Description}"
+                FontSize="20"
+                TextWrapping="Wrap"
+                FontWeight="Normal"/>
+        </GroupBox>
+
+        <GroupBox 
+            Grid.Row="4" 
+            Header="Subjects" 
+            FontSize="20" 
+            BorderThickness="0"
+            FontWeight="SemiBold"
+            VerticalAlignment="Center">
+            <TextBlock
+                Text="Polor research vessel, British Antarctic Survey,  Boaty McBoatface"
+                FontSize="20"
+                TextWrapping="Wrap"
+                FontWeight="Normal"/>
+        </GroupBox>
+
+        <Image 
+            Source="/Resurses/Image/booklogo.jpg" 
+            Grid.Column="1"
+            Grid.Row="1"
+            Grid.RowSpan="4"/>
+        
+    </Grid>
+</Page>
